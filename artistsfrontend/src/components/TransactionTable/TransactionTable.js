@@ -7,7 +7,7 @@ const TransactionTable = () => {
 
     useEffect(() => {
         const fetchTransactions = () => {
-            axios.get('http://localhost:5000/transactions')
+            axios.get('http://localhost:10000/transactions')
                 .then(response => {
                     const transactionsWithBalance = calculateRunningBalance(response.data);
                     setTransactions(transactionsWithBalance);

@@ -22,7 +22,7 @@ const AddTransaction = () => {
         const credit = newTransaction.transactionType === 'Credit' ? Number(newTransaction.amount) : 0;
         const debit = newTransaction.transactionType === 'Debit' ? Number(newTransaction.amount) : 0;
 
-        axios.post('http://localhost:5000/transactions', {
+        axios.post('http://localhost:10000/transactions', {
             date: newTransaction.date,
             description: newTransaction.description,
             credit,
